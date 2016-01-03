@@ -1,0 +1,57 @@
+When would you want to use a remote repository rather than keeping all your work
+local?
+
+	As a backup or to share between multiple users/computers.
+
+Why might you want to always pull changes manually rather than having Git
+automatically stay up-to-date with your remote repository?
+
+    Remote changes might conflict with you local ones, either via
+explicit conflict or by quietly rendering the changes you made bad.
+Better to know exactly what you're editing.
+
+Describe the differences between forks, clones, and branches.  When would you
+use one instead of another?
+
+	Fork -- makes your own copy of a repository.
+Any changes/saves you make will go to that copy.
+	Clones -- makes a local version of a repository.
+Any changes/saves you push to origin will generally go to the original.
+	Branches -- make changes to the same repository along a separate
+path that's easy to switch to or away from as well as easy to merge
+into master as necessary.
+
+You'd use fork to make your own version of an existing project,
+clone to pull a project down to your machine so you can use/continue it,
+and branch to do new work that isn't ready/appropriate for master yet.
+
+What is the benefit of having a copy of the last known state of the remote
+stored locally?
+
+	You don't need to go online to get your information.
+	You also are an automatic backup of the data.
+
+How would you collaborate without using Git or GitHub?  What would be easier,
+and what would be harder?
+
+    Shared documents (gdocs) or dropbox.
+	Versioning would not exist or would require separate files,
+and working in parallel would be triiicky.
+	Conflicts would become obvious immediately, though,
+because both methods attempt to sync aggressively.
+	Of course, we could just use SVN, which gives us versioning
+but is a heckuva lot more basic.
+	Feature branch development just has no analogue without git.
+
+When would you want to make changes in a separate branch rather than directly in
+master?  What benefits does each approach have?
+
+	If 'master' is only meant to include finished, ready code,
+then partial work belongs on branches.
+That way, people can easily build off master without having
+to deal with your not-yet-ready additions.
+A drawback is that your code and theirs fall out of sync,
+because they're unlikely to look at what you're doing until it's
+back in master.
+
+	Pull requests are a nice mechanism.
